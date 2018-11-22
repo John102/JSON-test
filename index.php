@@ -163,8 +163,8 @@
 
 			}
 
-			// LOAD JSON FROM NEWS FILE
-			if(!$_news = json_decode(file_get_contents("news.json"), true)) {
+			// IF NEWS LOADING FROM JSON FILE WORKS
+			if($_news = json_decode(file_get_contents("news.json"), true)) {
 				
 				// IF $_NEWS ARRAY IS NOT EMPTY
 				if($_news != "" || $_news != null) {
