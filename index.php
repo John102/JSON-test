@@ -14,6 +14,7 @@
     			-moz-box-sizing: border-box;
     			box-sizing: border-box;
 			}
+			
 			body {
 				background-color: #f1f1f1;
 				margin-top: 100px;
@@ -31,11 +32,13 @@
 				padding: 10px;
 				border-top-left-radius: 10px;
 			}
+			
 			#content {
 				background-color: #fff;
 				padding: 10px;
 
 			}
+			
 			#footer {
 				background-color: #d6d6d6;
 				padding: 5px 10px;
@@ -109,7 +112,6 @@
 	<body>
 
 		<form method="GET">
-
 			<label for="naam">Naam</label>
 			<input type="text" name="naam" placeholder="naam" required />
 
@@ -127,8 +129,7 @@
 
 			<br/>
 			<br/>
-
-
+			
 			<input type="submit" value="Plaats bericht!" />
 		</form>
 
@@ -155,7 +156,7 @@
 
 				// APPEND NEW NEWS TO ARRAY
 				$_newsData[] 	= $_newsNew;
-				$_finalData		= json_encode($_newsData);
+				$_finalData	= json_encode($_newsData);
 
 				// PUSH DATA INTO JSON FILE
 				file_put_contents("news.json", $_finalData);
